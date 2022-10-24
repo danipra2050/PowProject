@@ -6,7 +6,7 @@ const { DataTypes } = Sequelize;
 
 const Artist = dbConn.define('artist', {
     idartist: {
-        type: DataTypes.INT,
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
@@ -14,7 +14,7 @@ const Artist = dbConn.define('artist', {
         type: DataTypes.STRING
     },
     idCategorie: {
-        type: DataTypes.INT,
+        type: DataTypes.INTEGER,
         references: {
             model: Categorie,
             key: 'idcategorie'
@@ -29,3 +29,5 @@ const Artist = dbConn.define('artist', {
     updatedAt: false,
     createdAt: false
 });
+
+export default Artist;

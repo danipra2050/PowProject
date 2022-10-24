@@ -5,8 +5,9 @@ const { DataTypes } = Sequelize;
 
 const Categorie = dbConn.define('categorie', {
     idcategorie: {
-        type: DataTypes.INT,
-        primaryKey: true
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
     },
     categorieName: {
         type: DataTypes.STRING
